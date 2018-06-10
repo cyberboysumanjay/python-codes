@@ -5,14 +5,21 @@ def changeString(a,c1,c2):
         if b[i]==c1:
             b[i]=c2
     return b
-print (changeString("Happy",'p','a'))
+a="Test"
 """
 def changeString(a,c1,c2):
     b=list(a)
-    if b[len(b)-1]==c1:
-        b[len(b)-1]=c2
-        return b
+    if(len(b)>0):
+        if b[0] == c1 :
+            print (c2)
+            b=b[1:len(b)]
+            changeString(".join(b)",c1,c2)
+        else:
+            print (b[0])
+            b=b[1:len(b)]
+            changeString(".join(b)",c1,c2)
     else:
-        b=b[0:-1]
-        return changeString("".join(b),c1,c2)
+        return
+
+
 print (changeString("Happy",'p','a'))
